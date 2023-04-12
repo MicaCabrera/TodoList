@@ -14,7 +14,7 @@ Ejecuta el comando npm install para instalar las dependencias de la aplicación.
 Ejecuta el comando npm start para iniciar la aplicación.
 Abre un navegador web y navega a http://localhost:5173 para ver la aplicación en acción.
 
-Para verlo desde Nelify, desde el siguiente Link:
+Para verlo desde Netlify, desde el siguiente Link:
 https://creative-sprite-2c5dba.netlify.app/
 
 Tecnologías utilizadas:
