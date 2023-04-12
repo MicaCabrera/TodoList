@@ -1,4 +1,4 @@
-��#� �T�o�d�o�l�i�s�t�
+Todo List App
 
 Esta aplicación de lista de tareas está diseñada para ayudarte a mantener un registro de todas las tareas que necesitas realizar en tu día a día. Con esta aplicación, puedes agregar nuevas tareas, eliminar tareas existentes y filtrar tus tareas según su estado (Completas, Incompletas y todas las tareas agregadas).
 
