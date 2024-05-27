@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input, Button, Flex, Alert, AlertIcon } from "@chakra-ui/react";
+import { Input, Button, Flex, Alert, AlertIcon, Select } from "@chakra-ui/react";
 
 export const Form = ({ addListTask }) => {
   const [task, setTask] = useState("");
@@ -26,33 +26,31 @@ export const Form = ({ addListTask }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Flex display="flex">
-        <div>
-          <label htmlFor="task"></label>
-          <Input
-            id="task"
-            name="task"
-            autoComplete="off"
-            value={task}
-            onChange={(e) => setTask(e.target.value)}
-            placeholder="ej. limpiar"
-            size="md"
-            width="200px"
-            bgColor="whiteAlpha.800"
-            rounded="md"
-          />
-        </div>
-        <div>
-          <Button
-            size="md"
-            backgroundColor="brand.secondary"
-            type="submit"
-            ml="4px"
-            mr="4px"
-          >
-            Send
-          </Button>
-        </div>
+      <Flex direction={{ base: "column", md: "row" }} alignItems="center" pr={1}>
+        <Input
+          id="task"
+          name="task"
+          autoComplete="off"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          placeholder="ej. limpiar"
+          size="md"
+          width={{ base: "100%", md: "200px" }}
+          bgColor="whiteAlpha.800"
+          rounded="md"
+          mb={{ base: "2", md: "0" }}
+          mr={{ base: "0", md: "4px" }}
+        />
+        <Button
+          size="md"
+          backgroundColor="brand.secondary"
+          type="submit"
+          width={{ base: "100%", md: "auto" }}
+          my={{ base: "2", md: "0" }}  
+      
+        >
+          Send
+        </Button>
       </Flex>
       {error && (
         <Alert status="warning" p="1" mt="2">

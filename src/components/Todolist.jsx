@@ -20,7 +20,7 @@ export const Todolist = ({
 
   const todoList = filterTodoList.map((task) => (
     <List
-      w="400px"
+      w={{ base: "100%", md: "400px" }}
       key={task.id}
       style={{
         textDecoration: task.done ? "line-through" : "none",
@@ -32,10 +32,12 @@ export const Todolist = ({
         justify="space-between"
         bgColor="brand.primary"
         mt="2"
+        p="2"
         rounded="md"
+        direction={{ base: "column", sm: "row" }}  
       >
         <div> {task.task} </div>
-        <div>
+        <Flex justifyContent="flex-end" alignItems="center">
           <Button
             m="4px"
             p="1"
@@ -43,7 +45,7 @@ export const Todolist = ({
             size="xs"
             as={DeleteIcon}
             onClick={() => handleRemove(task.id)}
-          ></Button>
+          />
           <Button
             color="white"
             p="1"
@@ -51,8 +53,8 @@ export const Todolist = ({
             size="xs"
             as={CheckIcon}
             onClick={() => handleToggle(task.id)}
-          ></Button>
-        </div>
+          />
+        </Flex>
       </Flex>
     </List>
   ));

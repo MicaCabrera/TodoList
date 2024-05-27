@@ -60,7 +60,6 @@ function App() {
               Bienvenidx al TodoList !
             </PopoverHeader>
             <PopoverBody>
-              {" "}
               Podés agregar tareas apretando el botón 'Send', marcarlas como
               hechas con la tilde verde o eliminarlas! Para encontrar alguna
               tarea más rápido podés ultilizar los filtros.
